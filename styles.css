@@ -1,0 +1,112 @@
+/* Basic styling for body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #221f1f;   
+}
+
+p {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+p:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #0815d8;
+    color: rgb(207, 7, 7);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
+    color: rgb(251, 255, 5);
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Container to arrange cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 15px;
+    justify-items: center;
+    background-image: url('Images/FLAG2.jpg'); /* Add your image URL here */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the background image */
+    min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Card styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for contrast */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(243, 6, 6, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    font-size: 1rem;
+    overflow: hidden;
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+    filter: none; /*blurring card*/
+}
+
+/* Image styling */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    filter: none; /* No effect on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
