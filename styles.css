@@ -67,13 +67,12 @@ p:visited {
     padding: 15px;
     justify-items: center;
     background-image: url('Images/FLAG2.jpg'); /* Add your image URL here */
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    background-size: cover; /* Ensures the image covers the container */
-    background-position: center; /* Centers the background image */
-    min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
 }
 
 /* Card styling */
@@ -89,7 +88,7 @@ p:visited {
     width: 150px;
     position: relative;
     cursor: pointer;
-    filter: none; /*blurring card*/
+    filter: none; /* No blurring card */
 }
 
 /* Image styling */
@@ -110,3 +109,51 @@ p:visited {
     transform: scale(1.1);
 }
 
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+    
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .card {
+        width: 140px; /* Slightly smaller cards for tablets */
+        padding: 10px;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+    .navbar-title {
+        font-size: 1.2rem;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 8px;
+    }
+    
+    .card {
+        width: 100%; /* Full width card for mobile */
+        padding: 10px;
+    }
+
+    .card img {
+        border-radius: 10px;
+    }
+}
