@@ -6,7 +6,8 @@
     <title>Document</title>
     <style>
         /* Reset some default margins and paddings */
-        body, p {
+      /* Reset margins and paddings for body and p */
+body, p {
     margin: 0;
     padding: 0;
 }
@@ -14,10 +15,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: black;
-    color: rgb(0, 0, 0); /* text color*/
+    color: rgb(255, 255, 255); /* Changed text color for better contrast */
     line-height: 1.6;
 }
 
+/* Navbar styling */
 nav {
     background-color: blue;
     padding: 10px;
@@ -34,6 +36,7 @@ nav a:hover {
     background-color: #575757;
 }
 
+/* Content container */
 div {
     max-width: 800px;
     margin: 20px auto;
@@ -43,6 +46,7 @@ div {
     border-radius: 5px;
 }
 
+/* Image styling */
 img {
     display: block;
     max-width: 100%; /* Ensures the image is responsive */
@@ -51,15 +55,54 @@ img {
     border-radius: 5px;
 }
 
+/* Paragraph styling */
 p {
     text-align: justify;
     margin-top: 15px;
 }
 
+/* Responsive for Tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* Adjust font size for tablet */
+    }
+    
+    div {
+        max-width: 90%; /* Make container more flexible */
+        padding: 10px;
+    }
+    
+    nav a {
+        padding: 5px; /* Adjust padding for nav links */
+    }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* Slightly smaller font for mobile */
+    }
+    
+    div {
+        max-width: 100%; /* Use full width of the screen */
+        padding: 10px;
+        margin: 10px; /* Smaller margin for mobile */
+    }
+    
+    nav a {
+        padding: 3px 5px; /* Smaller padding for mobile */
+    }
+    
+    p {
+        font-size: 0.85rem; /* Smaller font size for paragraphs on mobile */
+    }
+}
+
+
     </style>
 </head>
 <body>
-    <nav><a href="main.html">Home</a></nav>
+    <nav><a href="index.html">Home</a></nav>
    <div>
          <img src="Images/NN.jfif" alt ="Benigno Aquino">
     <p>
